@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/Libs/materialize-v1.0.0/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios Support -->
+    <link rel="apple-touch-icon" href="img/icons/icon2-96x96.png">
+    <link rel="apple-mobile-web-app-status-bar" content="#000">
+    <meta name="theme-color" content="#000">   
+
+    <!-- Calender theme -->
+    <link rel="stylesheet" href="/Libs/caleandar-master/caleandar-master/css/theme3.css"/>
+      
+  </head>
+  <body class="grey lighten-4">
+      
+    <!-- top nav -->
+    <nav class="z-depth-0 red darken-1">
+      <div class="nav-wrapper red darken-1 container">
+        <a href="/">UWI<span> GYM</span></a>
+        <span class="right grey-text text-darken-1">
+          <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+        </span>
+      </div>
+    </nav>
+  
+    <!-- side nav -->
+    <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">UWI GYM</a></li>
+      <li><a href="/" class="waves-effect">Home</a></li>
+      <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+      <li><a href="/pages/calendar.html" class="waves-effect">Calendar</a></li>
+      <li><a href="/pages/analytics.html" class="waves-effect">Analytics</a></li>
+      <li><a href="#" class="loggedOut login sidenav-trigger sidenav-close waves-effect" data-target="side-form-login">Login</a></li>
+      <li><a class="loggedIn logout waves-effect" style="display: none;">Logout</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="/pages/contact.html" class="waves-effect">
+        <i class="material-icons">mail_outline</i>Contact</a>
+      </li>
+    </ul>
+    
+    <!-- Login Form-->
+    <div id="side-form-login" class="sidenav side-form">
+      <form class="loginForm container section">
+        <h6 >Login</h6>
+        <div class="divider"></div>
+        <div class="input-field">
+          <input placeholder="" id="Email" type="email" class="validate">
+          <label for="Email">Email</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="" id="Password" type="Password" class="validate">
+          <label for="Password">Password</label>
+        </div>
+        <div class="input-field center">
+          <button class="login btn-small">Login</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="center row">
+      <div class="container" id="calendar" > </div>
+    </div>
+
+    <div class="loggedIn center" style="display: none;">
+      <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+        <i class="material-icons">add</i>
+      </a>
+    </div>
+
+    <!-- add Calendar Event side nav -->
+    <div id="side-form" class="sidenav side-form">
+      <form class="calendarEventForm container section">
+        <h6 >New Event</h6>
+        <div class="divider"></div>
+        <div class="input-field">
+          <input placeholder="" id="Event" type="text" class="validate">
+          <label for="Event">Description</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="" id="Date" type="text" class="datepicker">
+          <label for="Date">Date</label>
+        </div> 
+        <div class="input-field center">
+          <button class="btn-small">Add</button>
+        </div>
+      </form>
+    </div>
+        
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.5.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.5.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.5.0/firebase-firestore.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>   
+    
+    <!-- Google Charts-->
+    <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"></script>
+    <script type = "text/javascript"> google.charts.load('current', {packages: ['corechart']});</script>
+    
+    <script type="text/javascript" src="/Libs/materialize-v1.0.0/materialize/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/auth.js"></script> 
+    <script src="/js/ui.js"></script>
+    <script src="/js/db.js"></script>
+    <script type="text/javascript" src="/Libs/caleandar-master/caleandar-master/js/caleandar.min.js"></script>
+    <script src="/js/calendar.js"></script>
+    <script src="/js/analytics.js"></script>
+    
+  </body>
+</html>
+
+
+
