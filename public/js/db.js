@@ -24,11 +24,11 @@ if (personForm != null){
             db.collection('ValidUsers').get().then((snapshot) =>{
                 snapshot.docs.forEach(doc =>{
                     if (doc.id == StudentID ){
-                        if (doc.data().timeIn != ""){
-                            capacityRemove(doc.id);
-                        }
-                        else{
+                        if (doc.data().timeIn == ""){
                             capacityAdd(doc.id);
+                        }
+                        else if(doc.data().timeIn != ""){
+                            capacityRemove(doc.id);
                         }
                     }   
                 })
@@ -59,9 +59,19 @@ function capacityRemove(id) {
     capacityRemoveDb.update({count: decrement});
     capacityRemoveDb.update({time: (new Date()).toLocaleString('en-US')});
 
+   
     const userTime = db.collection('ValidUsers').doc(id)
-    userTime.update({timeIn:""});
-
+    
+    userTime.get().then(function(doc) {
+        let time = doc.data().timeIn;
+        const data= {
+                id: id,
+                timeIn: time,
+                timeOut: (new Date()).toLocaleString('en-US')
+            }   
+            db.collection('UserLog').add(data).catch(err => console.log(err));
+            db.collection('ValidUsers').doc(id).update({timeIn:""});
+    });
 }
 
 

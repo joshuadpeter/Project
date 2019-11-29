@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "52c1a1641dc0f7cd342aadbd273bd81a"
+    "revision": "5fbc5a4f83f295ae018dff06d3a21cdd"
   },
   {
     "url": "js/analytics.js",
@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "js/auth.js",
-    "revision": "ec34734451c098553d78d03c25054acf"
+    "revision": "14218a565ef2d703ed5a0bf4012dfa00"
   },
   {
     "url": "js/calendar.js",
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "js/db.js",
-    "revision": "d7cab7aba5454c2bfe4bf3f6ad26a2aa"
+    "revision": "703eb77b4f2ace61106688ffe183fc82"
   },
   {
     "url": "js/desktop.ini",
@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "js/ui.js",
-    "revision": "9b755df2906c9fee9f8ad4081a97f07c"
+    "revision": "acf9494268e5b97b63065327a37aee32"
   },
   {
     "url": "Libs/caleandar-master/caleandar-master/css/demo.css",

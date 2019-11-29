@@ -20,18 +20,20 @@ function updateAnnouncements (data, id){
       <div class="announcement-description">${data.description}</div>
     </div>
     <div class="announcement-delete">
-      <i class="material-icons" data-id=${id}>delete_outline</i>
+      <i class="loggedIn material-icons" style="display:none" data-id=${id}>delete_outline</i>
     </div>
   </div>
   `
   if (document.querySelector('.announcements')){
     document.querySelector('.announcements').insertAdjacentHTML("afterbegin", newAnnouncement);
   }
+  // updateUI("signedIn");
 }
+
 
 // remove announcement changes to UI
 function removeAnnouncement (id){
-  if (document.querySelector('.announcements')){  
+  if (document.querySelector(`.announcement[data-id=${id}]`)){  
     document.querySelector(`.announcement[data-id=${id}]`).remove();
   }
 }
