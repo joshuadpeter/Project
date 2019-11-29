@@ -2,10 +2,9 @@
 Comp 3613 - Software engineering 2 Project
 
 Group Members: 
+
     Samantha Blanc - 816007464
-    
     Shirniqua Hector - 816009782
-    
     Joshua Peter - 816117607
 
 
