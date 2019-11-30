@@ -9,3 +9,5 @@ Group Members:
 
 
 App link http://uwi-gym-app.firebaseapp.com/
+
+Uwi Gym Progressive Web App, hosted on firebase utilizing firestore and firebase authentication.
